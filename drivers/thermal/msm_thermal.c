@@ -121,6 +121,9 @@ static void disable_msm_thermal(void)
 	cancel_delayed_work(&check_temp_work);
 	flush_scheduled_work();
 
+	if (limited_max_freq == MSM_CPUFREQ_NO_LIMIT)
+		return;
+
 	for_each_possible_cpu(cpu) {
 		cpu_policy = cpufreq_cpu_get(cpu);
 		if (cpu_policy) {
