@@ -87,8 +87,6 @@ static void set_cpu_work(struct work_struct *work)
 
 unsigned int smooth_level = 99;
 
-unsigned int smooth_level = 99;
-
 static int msm_cpufreq_target(struct cpufreq_policy *policy,
 				unsigned int target_freq,
 				unsigned int relation)
