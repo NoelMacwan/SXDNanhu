@@ -323,23 +323,6 @@ obj-$(CONFIG_MSM_RTB) += msm_rtb.o
 obj-$(CONFIG_MSM_CACHE_ERP) += cache_erp.o
 obj-$(CONFIG_MSM_CACHE_DUMP) += msm_cache_dump.o
 
-
-obj-$(CONFIG_MSM_HSIC_SYSMON) += hsic_sysmon.o
-obj-$(CONFIG_MSM_HSIC_SYSMON_TEST) += hsic_sysmon_test.o
-
-obj-$(CONFIG_MSM_RPM_SMD) += rpm-smd.o
-obj-$(CONFIG_MSM_CPR) += msm_cpr.o
-obj-$(CONFIG_MSM_VP_REGULATOR) += msm_vp.o
-
-ifdef CONFIG_MSM_CPR
-obj-$(CONFIG_DEBUG_FS) += msm_cpr-debug.o
-endif
-
-#//MTD-BSP-KC-HWID-00+[
-obj-y +=fih_proc_fs.o
-#//MTD-BSP-KC-HWID-00+]
-
 obj-$(CONFIG_FORCE_FAST_CHARGE) += fastchg.o
 obj-$(CONFIG_TURBO_BOOST) += msm_turbo.o
-obj-$(CONFIG_MSM_CPU_PWRCTL) +=  msm_cpu_pwrctl.o
 obj-$(CONFIG_MSM_CPUFREQ_LIMITER) += cpufreq_limit.o
